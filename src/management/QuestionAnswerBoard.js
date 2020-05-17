@@ -26,7 +26,7 @@ import Paper from '@material-ui/core/Paper';
     createData('Gingerbread', 356, 16.0, 49, 3.9),
   ];
 
-export default function BuyingService() {
+export default function QuestionAnswerBoard() {
         const classes = useStyles();
         return (
             <div>
@@ -34,7 +34,7 @@ export default function BuyingService() {
                     <Table className={classes.table} aria-label="simple table">
                         <TableHead>
                         <TableRow>
-                            <TableCell>구매대행</TableCell>
+                            <TableCell>Qeustion Board</TableCell>
                             <TableCell align="right">Calories</TableCell>
                             <TableCell align="right">Fat&nbsp;(g)</TableCell>
                             <TableCell align="right">Carbs&nbsp;(g)</TableCell>

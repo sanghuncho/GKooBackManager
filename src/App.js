@@ -11,6 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import BuyingService from './management/BuyingService'
 import ShippingService from './management/ShippingService'
+import QuestionAnswerBoard from './management/QuestionAnswerBoard'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,15 +24,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  // content: {
-  //   flexGrow: 1,
-  //   height: '100vh',
-  //   overflow: 'auto',
-  // },
-  // container: {
-  //   paddingTop: theme.spacing(4),
-  //   paddingBottom: theme.spacing(4),
-  // },
 }));
 
 function App() {
@@ -46,19 +38,11 @@ function App() {
         <Typography variant="h6" className={classes.title}>
           GKoo
         </Typography>
-        {/* <Button color="inherit">Login</Button> */}
       </Toolbar>
     </AppBar>
-    {/* <div className={classes.root}> */}
     
     <AppMenu/>
-
-    {/* <main className={classes.content}>
-        <Container maxWidth="lg" className={classes.container}>
-          <BuyingService/>
-        </Container>
-    </main> */}
-    {/* </div> */}
+   
     </div>
   );
 }
@@ -99,12 +83,13 @@ function AppMenu() {
     setSelectedIndex(index);
   };
 
-  //const appMenu = selectedIndex;
   let content
   if (selectedIndex == 1) {
-    content = <BuyingService/>
-  } else {
     content = <ShippingService/>
+  } else if (selectedIndex == 2) {
+    content = <BuyingService/>
+  } else if (selectedIndex == 3) {
+    content = <QuestionAnswerBoard/>
   }
   return (
     <div className={classes.root}>
